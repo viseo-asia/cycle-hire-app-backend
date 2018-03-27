@@ -9,7 +9,7 @@
       "region": "us-east-1",
       "variableSyntax": "\\${([ ~:a-zA-Z0-9._'\",\\-\\/\\(\\)]+?)}",
       "name": "aws",
-      "runtime": "nodejs8.10",
+      "runtime": "nodejs6.10",
       "versionFunctions": true,
       "remoteFunctionData": null,
       "compiledCloudFormationTemplate": {
@@ -106,7 +106,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/CLP-root-service/dev/1522136024995-2018-03-27T07:33:44.995Z/CLP-root-service.zip"
+                "S3Key": "serverless/CLP-root-service/dev/1522136634546-2018-03-27T07:43:54.546Z/CLP-root-service.zip"
               },
               "FunctionName": "CLP-root-service-dev-app",
               "Handler": "index.handler",
@@ -117,7 +117,7 @@
                   "Arn"
                 ]
               },
-              "Runtime": "nodejs8.10",
+              "Runtime": "nodejs6.10",
               "Timeout": 6
             },
             "DependsOn": [
@@ -125,14 +125,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "AppLambdaVersionkOVuwwWVBeY0TzH22sTnprCrnHgsoh7cvCdaM9vn2N8": {
+          "AppLambdaVersionZrFI7p7726OSG0tKsyuTuKdciJ452J0YSQeZROJTbU": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AppLambdaFunction"
               },
-              "CodeSha256": "CA7Js+zMKgD1sd6yFtlSoxCvlppKVoqh9PgnG+CDdCM="
+              "CodeSha256": "qPvQOKo6+Y7pQGreYCOKlilyQZ4dGfFM2/LTmrkZxHY="
             }
           },
           "ApiGatewayRestApi": {
@@ -242,7 +242,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1522136025058": {
+          "ApiGatewayDeployment1522136634602": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -298,7 +298,7 @@
           "AppLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AppLambdaVersionkOVuwwWVBeY0TzH22sTnprCrnHgsoh7cvCdaM9vn2N8"
+              "Ref": "AppLambdaVersionZrFI7p7726OSG0tKsyuTuKdciJ452J0YSQeZROJTbU"
             }
           },
           "ServiceEndpoint": {
@@ -361,7 +361,7 @@
     "artifact": "/Users/jm/Documents/Projects/CLP/.serverless/CLP-root-service.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/CLP-root-service/dev/1522136024995-2018-03-27T07:33:44.995Z",
+    "artifactDirectoryName": "serverless/CLP-root-service/dev/1522136634546-2018-03-27T07:43:54.546Z",
     "artifact": "CLP-root-service.zip"
   }
 }

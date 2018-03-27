@@ -6,3 +6,6 @@ sls deploy --region ap-southeast-1
 
 # run to local server
 sls offline start
+
+# logging
+sls logs -f <fuctionName>

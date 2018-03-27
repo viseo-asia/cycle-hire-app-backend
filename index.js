@@ -5,11 +5,12 @@ const bodyParser = require('body-parser');
 const fetch = require('node-fetch')
 const DataLoader = require('dataloader')
 
-const bikepointResource = async (keys) => 
-    Promise.all(keys.map(async (key) => {
+const bikepointResource = async function (keys) {
+    return Promise.all(keys.map(async (key) => {
         const response = await fetch('https://api.tfl.gov.uk/bikepoint')
         return response.json()
     }))
+}
 
 app.use(bodyParser.json({ strict: false }));
 app.use(function(req, res, next) {

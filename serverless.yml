@@ -2,7 +2,7 @@ service: CLP-root-service
 
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs6.10
   stage: dev
   region: us-east-1
 
