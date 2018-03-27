@@ -1,0 +1,31 @@
+{
+  "name": "CLP",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viseo-asia/cycle-hire-app-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viseo-asia/cycle-hire-app-backend/issues"
+  },
+  "homepage": "https://github.com/viseo-asia/cycle-hire-app-backend#readme",
+  "dependencies": {
+    "aws-sdk": "^2.214.1",
+    "body-parser": "^1.18.2",
+    "dataloader": "^1.4.0",
+    "express": "^4.16.3",
+    "node-fetch": "^2.1.2",
+    "serverless-http": "^1.5.3"
+  },
+  "devDependencies": {
+    "serverless-offline": "^3.18.0"
+  }
+}
