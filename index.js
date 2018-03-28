@@ -18,7 +18,13 @@ app.get(
         res.send('Displaying this message means you are not authorized to view this route.')
 )
 app.get('/bikepoint', bikepointModule.requestHandler.getList)
-
+app.get('/bikepoint/search', bikepointModule.requestHandler.search)
 app.get('/bikepoint/:id', bikepointModule.requestHandler.findOne)
+
+app.get('*', function(req, res){
+    res.send({message: "Route not found"}, 404);
+});
+
+
 
 module.exports.handler = serverless(app);
