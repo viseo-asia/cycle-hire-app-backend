@@ -22,7 +22,7 @@ app.get('/bikepoint/search', bikepointModule.requestHandler.search)
 app.get('/bikepoint/:id', bikepointModule.requestHandler.findOne)
 
 app.get('*', function(req, res){
-    res.send({message: "Route not found"}, 404);
+    res.send({message: "Route not found"});
 });
 
 
