@@ -4,15 +4,16 @@ const {RequestHandler} = require('../../helpers/bikepoint-fetch-handler')
 
 const api = RequestHandler()
 
-const bikepointResource = (keys) =>
-    Promise.all(keys.map((key) => 
-    fetch(api.bikepoint().list())
-    .then(r => r.json())))
+const bikepointResource = (params) =>
+        fetch(api.bikepoint().list(params))
+        .then(r => r.json())
 
-const bikepointLoader = () => {
-    const loader = new DataLoader((keys) => bikepointResource(keys))
-    return loader.load(0)
-}
+// const params = {swLat: 51.4953, swLon: -0.1369, neLat:51.5011, neLon: -0.1274}
+// bikepointResource()
+// .then(result => console.log(result)) //?
+
+const bikepointLoader = (params) => 
+    bikepointResource(params)
 
 const bikepointFindById = (id) =>
     fetch(api.bikepoint().findOneById(id))
