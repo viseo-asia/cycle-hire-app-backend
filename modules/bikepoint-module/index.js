@@ -1,4 +1,4 @@
-const {bikepointLoader, bikepointFindById, bikepointSearch} = require('./model')
+const {bikepointLoader, bikepointFindById, bikepointSearch} = require('./model');
 
 /* 
     docs: https://blog.tfl.gov.uk/2017/04/06/data-themes-1-cycling-in-the-city/
@@ -7,28 +7,28 @@ const {bikepointLoader, bikepointFindById, bikepointSearch} = require('./model')
 const list = ({query}, res) => 
     bikepointLoader(query)
     .then(data => res.send({data, message: "Results found"}))
-    .catch(error => res.status(500).send(error))
+    .catch(error => res.status(500).send(error));
 
 const findOne = (req, res) => 
     bikepointFindById(req.params.id)
     .then(data => res.send({data, message: "Results found"}))
-    .catch(error => res.status(500).send(error))
+    .catch(error => res.status(500).send(error));
 
 const search = ({query}, res) => 
     bikepointSearch(query.query)
     .then(data => {
         let message
         if(!!data.length) {
-            message = "Results found"
+            message = "Results found";
             res.status(200)
         } else {
-            message = `Cannot find results for keyword ${query.query}`
+            message = `Cannot find results for keyword ${query.query}`;
             res.status(404)
         }
         return {data, message}
     })
     .then(response => res.send(response))
-    .catch(error => res.status(500).send(error))
+    .catch(error => res.status(500).send(error));
 
 module.exports = {
     requestHandler: {
@@ -36,4 +36,4 @@ module.exports = {
         findOne,
         search
     }
-}
+};
