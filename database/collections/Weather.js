@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 
-const { Schema: { Types }, model } = mongoose;
-const { String, ObjectId, Number } = Types;
-
+const Schema = mongoose.Schema;
 const weatherSchema = new Schema({
     bikepointId: { type: ObjectId },
     coord: {
@@ -40,5 +38,5 @@ const weatherSchema = new Schema({
 });
 
 module.exports = {
-    WeatherCollection: model('Weather', weatherSchema)
+    WeatherCollection: mongoose.model('Weather', weatherSchema)
 };
