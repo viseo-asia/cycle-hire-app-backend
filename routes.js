@@ -1,6 +1,7 @@
 const bikepointModule = require('./modules/bikepoint-module');
 
 const bikeModule = bikepointModule.requestHandler;
+
 module.exports = (app) => {
     app.get(
         '/',

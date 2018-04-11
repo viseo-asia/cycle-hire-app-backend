@@ -2,39 +2,39 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 const weatherSchema = new Schema({
-    bikepointId: { type: ObjectId },
+    bikepoint: { type: ObjectId, required: true },
     coord: {
-        lat: { type: Number },
-        lng: { type: Number }
+        lat: { type: Number, required: true },
+        lng: { type: Number, required: true }
     },
     weather: {
-        id: { type: Number },
-        main: { type: String },
-        description: { type: String },
-        icon: { type: String }
+        id: { type: Number, required: true },
+        main: { type: String, required: true },
+        description: { type: String, required: true },
+        icon: { type: String, required: true }
     },
-    base: { type: String },
+    base: { type: String, required: true },
     main: {
-        temp: { type: Number },
-        pressure: { type: Number },
-        humidity: { type: Number },
-        temp_min: { type: Number },
-        temp_max: { type: Number },
-        sea_level: { type: Number },
-        grnd_level: { type: Number },
+        temp: { type: Number, required: true },
+        pressure: { type: Number, required: true },
+        humidity: { type: Number, required: true },
+        temp_min: { type: Number, required: true },
+        temp_max: { type: Number, required: true },
+        sea_level: { type: Number, required: true },
+        grnd_level: { type: Number, required: true },
     },
     wind: {
-        speed: { type: Number },
-        deg: { type: Number },
+        speed: { type: Number, required: true },
+        deg: { type: Number, required: true },
     },
     sys: {
-        message: { type: Number },
-        country: { type: String },
-        sunrise: { type: Number },
-        sunset: { type: Number },
+        message: { type: Number, required: true },
+        country: { type: String, required: true },
+        sunrise: { type: Number, required: true },
+        sunset: { type: Number, required: true },
     },
-    name: { type: String },
-    cod: { type: Number }
+    name: { type: String, required: true },
+    cod: { type: Number, required: true }
 });
 
 module.exports = {

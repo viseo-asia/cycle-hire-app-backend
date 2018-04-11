@@ -1,4 +1,3 @@
-const {bikepointLoader, bikepointFindById, bikepointSearch} = require('./model');
 const { BikepointsCollection } = require('../../database/collections/Bikepoints');
 /*
     docs: https://blog.tfl.gov.uk/2017/04/06/data-themes-1-cycling-in-the-city/

@@ -3,10 +3,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const bikepointsSchema = new Schema({
-    commonName: { type: String },
-    placeType: { type: String },
-    lat: { type: Number },
-    lng: { type: Number }
+    commonName: { type: String, required: true },
+    placeType: { type: String, required: true },
+    lat: { type: Number, required: true },
+    lng: { type: Number, required: true }
 });
 bikepointsSchema.index({'$**': 'text'});
 module.exports = {
