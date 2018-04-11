@@ -14,7 +14,7 @@ if (IS_OFFLINE === 'true') {
   })
 } else {
   dynamoDb = new AWS.DynamoDB.DocumentClient();
-};
+}
 
 const params = {
     TableName : "Movies",
@@ -35,7 +35,7 @@ const params = {
 dynamoDb
 .createTable(params, (err, data) => 
     new Promise((resolve, reject) => {
-        if(err)  reject(err)
+        if(err)  reject(err);
         resolve(data)
     })
 );
