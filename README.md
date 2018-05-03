@@ -31,3 +31,7 @@ sls logs -f <fuctionName>
 ```
     Search for bike stations by their name, a bike point's name often contains information about the name of the street or nearby landmarks, for example. Note that the search result does not contain the PlaceProperties i.e. the status or occupancy of the BikePoint, to get that information you should retrieve the BikePoint by its id on 
 ```
+
+## Architecuture C4 Components
+
+![Backend C4 Components](docs/backend-c4-components.png)
